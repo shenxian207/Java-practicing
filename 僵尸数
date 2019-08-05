@@ -1,0 +1,30 @@
+package test;
+
+public class HelloWorld {
+	public static void main(String []args) {
+		int i,j,p,q,m,n,e,f,k=0,number;
+		int a[];
+		a=new int[4];
+		for(i=1000;i<9999;i++) {
+			number=i;
+			for(j=3;j>=0;j--) {
+				a[j]=number%10;
+				number=number/10;
+			}
+			for(m=0;m<4;m++) {
+				for(n=0;n!=m&n<4;n++) {
+					e=a[m]*10+a[n];
+					for(p=0;p!=m&p!=n&p<4;p++) {
+						for(q=0;q!=m&q!=n&q!=p&q<4;q++) {
+							f=a[q]*10+a[p];
+							if(e*f==i) {
+								k++;
+							}
+						}
+					}
+				}
+			}
+		}
+		System.out.println(k);
+	}
+}
