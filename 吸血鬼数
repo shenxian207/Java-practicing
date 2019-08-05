@@ -9,11 +9,11 @@ public class HelloWorld {
 		b=new int[16];
 		for(i=1000;i<9999;i++) {
 			number=i;
-			for(j=3;j>=0;j--) {
+			for(j=3;j>=0;j--) {       //得到number的每一位数字
 				a[j]=number%10;
 				number=number/10;
 			}
-			for(m=0;m<4;m++) {
+			for(m=0;m<4;m++) {            //求得吸血鬼数i
 				for(n=0;n<4;n++) {
 					if(n!=m) {
 						e=a[m]*10+a[n];
@@ -21,14 +21,14 @@ public class HelloWorld {
 							for(q=0;q<4;q++) {
 								if(p!=m&p!=n&q!=m&q!=n&q!=p) {
 								    f=a[p]*10+a[q];
-								    if(e*f==i) {   //求得吸血鬼数i
-								    	for(int h=0;h<k;h++) {   //保证没有重复的数字
+								    if(e*f==i) {      
+								    	for(int h=0;h<k;h++) {       //保证没有重复的数字
 								    		if(i==b[h]) {
 								    			t=1;
 								    		}
 								    	}
 								    	if(t==0) {
-								    		b[k]=i;
+								    		b[k]=i;     //得到存储吸血鬼数的数组b
 								    		k++;
 								    	}
 								    	t=0;
